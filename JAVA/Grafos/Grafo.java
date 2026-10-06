@@ -1,5 +1,5 @@
 package JAVA.Grafos;
-
+import java.util.*;
 public abstract class Grafo implements Iterable<Aresta>{
 
     public Grafo(){
@@ -11,5 +11,6 @@ public abstract class Grafo implements Iterable<Aresta>{
 
     public abstract int size();
 
+    public abstract void adicionarNos(List<Integer> nos);
     
 }
