@@ -12,16 +12,16 @@ public class testes{
                 Grafo grafo = new direcionado();
 
                 for (int num : nos) {
-                        grafo.addVertice(num);
+                        grafo.adicionarVertice(num);
                 }
                 grafo.adicionarAresta(0, 1);
 
 
 
 //      Bfs algoritmo = new Bfs();
-        Dfs algoritmo2 = new Dfs();
+//      Dfs algoritmo2 = new Dfs();
 //      System.out.println(algoritmo.bfsInterativo(grafo, 0));
-        System.out.println(algoritmo2.dfsRecursivo(grafo, 0));
+//      System.out.println(algoritmo2.dfsRecursivo(grafo, 0));
 }
 
 }

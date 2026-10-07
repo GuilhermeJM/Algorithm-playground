@@ -16,7 +16,7 @@ public class Aresta {
 		public Aresta(Vertice origem, Vertice destino, double peso ) {
 		this.origem = origem;
 		this.destino = destino;
-		this.identificador = origem + "->" + destino;
+		this.identificador = origem.getId() + "->" + destino.getId();
 		this.peso = peso;
 		this.ponderado = true;
 	}
