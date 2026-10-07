@@ -9,6 +9,8 @@ public abstract class Grafo implements Iterable<Aresta>{
 
     public abstract void removerAresta(int origem, int destino);
 
+    public abstract void adicionarVertice(int vertice);
+
     public abstract int size();
 
     public abstract void adicionarNos(List<Integer> nos);

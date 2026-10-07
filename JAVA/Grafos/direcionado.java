@@ -13,8 +13,10 @@ public class direcionado extends Grafo {
 
     @Override
     public void adicionarAresta(int origem, int destino) {
-        if(getIndexByIdentificador(origem + "->" + destino) == -1) {
-            Aresta aresta = new Aresta(origem, destino);
+        Vertice verticeOrigem = getVertice(origem);
+        Vertice verticeDestino = getVertice(destino);
+        if(getIndexByIdentificador(verticeOrigem.getId() + "->" + verticeDestino.getId()) == -1) {
+            Aresta aresta = new Aresta(verticeOrigem, verticeDestino);
             this.arestas.add(aresta);
         }
         // Implementação específica para grafos direcionados
@@ -22,7 +24,7 @@ public class direcionado extends Grafo {
 
     @Override
     public void removerAresta(int origem, int destino) {
-        int index = getIndexByIdentificador(origem + "->" + destino);
+        int index = getIndexByIdentificador(verticeOrigem.getId() + "->" + verticeDestino.getId());
         if(index != -1) {
             this.arestas.remove(index);
         }

@@ -4,36 +4,36 @@ public class Aresta {
 	private final String identificador;
 	private double peso;
 	private boolean ponderado;
-	private int origem;
-	private int destino;
+	private Vertice origem;
+	private Vertice destino;
 
-	public Aresta(int origem, int destino) {
+	public Aresta(Vertice origem, Vertice destino) {
 		this.origem = origem;
 		this.destino = destino;
-		this.identificador = origem + "->" + destino;	
+		this.identificador = origem.getId() + "->" + destino.getId();
 	}
 
-		public Aresta(int origem, int destino, double peso ) {
+		public Aresta(Vertice origem, Vertice destino, double peso ) {
 		this.origem = origem;
 		this.destino = destino;
-		this.identificador = origem + "->" + destino;	
+		this.identificador = origem + "->" + destino;
 		this.peso = peso;
 		this.ponderado = true;
 	}
 
-	public int getOrigem() {
+	public Vertice getOrigem() {
 		return origem;
 	}
 
-	public int getDestino() {
+	public Vertice getDestino() {
 		return destino;
 	}
 
-	public void setOrigem(int origem) {
+	public void setOrigem(Vertice origem) {
 		this.origem = origem;
 	}
 
-	public void setDestino(int destino) {
+	public void setDestino(Vertice destino) {
 		this.destino = destino;
 	}
 
